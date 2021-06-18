@@ -76,13 +76,13 @@ def travel():
         elif(key=="L" or key=="l") :
             if(vehicle.location.global_relative_frame.alt>=20.0):
                 move(0,0,10,1)
-                alti-=10
+                alti-=20
                 time.sleep(10)
                 print("altitude: {val}".format(val=vehicle.location.global_relative_frame.alt))
         elif(key=="H"or key=="h"):
             move(0,0,-10,1)
             time.sleep(10)
-            alti+=10
+            alti+=20
             print("altitude: {val}".format(val=vehicle.location.global_relative_frame.alt))
         elif(key=="E" or key=="e"):
             print("Returning to home location....\n")

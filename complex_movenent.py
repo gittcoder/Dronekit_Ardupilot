@@ -3,6 +3,8 @@ from dronekit import connect,VehicleMode,LocationGlobalRelative
 import time
 from pymavlink import mavutil
 from threading import Thread
+import builtins
+import pygame
 vehicle=connect("udp:127.0.0.1:14550",wait_ready=True)
 
 def send_ned_velocity(x,y,z,duration):
@@ -41,7 +43,7 @@ def form_square():
     flag1=False
     flag2=False
     thread=Threader(-north,east,down,time)
-    for i in range(1):
+    for i in range(4):
         if not flag1 and not flag2:
             thread.start()
             thread.join()

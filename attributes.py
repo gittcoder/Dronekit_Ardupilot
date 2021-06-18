@@ -35,7 +35,7 @@ vehicle.groundspeed = 3.2
 
 vehicle.mode = VehicleMode("GUIDED")
 vehicle.armed = True
-while not vehicle.mode.name=='GUIDED' and not vehicle.armed and not api.exit:
+while not vehicle.mode.name=='GUIDED' and not vehicle.armed :
     print(" Getting ready to take off ...")
     time.sleep(1)
 #Point the gimbal straight down
